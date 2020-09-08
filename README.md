@@ -1,1 +1,1 @@
-# javascript-crash-course
+# JavaScript for Beginner in Crash Course Series
