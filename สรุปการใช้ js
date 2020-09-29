@@ -1,0 +1,141 @@
+1.javascript variables มี 3 อันคือ
+- var
+- let
+- const
+แต่ว่า js version ใหม่จะใช้ let,const เพราะ var จะมีปห.เยอะ
+const มาจาก constant คือค่าคงที่ 
+แต่ let ่าจะเปลี่ยนถ้าประกาศค่าอีกครั้ง
+2.การตั้งชื่อควรเป็น carmel case เช่น myName, myHeight, myWeight
+3.js has 2 different data types that are primitive types and reference types
+primitive types
+- String
+- Number
+- Boolean
+- Undefined
+- Null
+- Symbol
+- Bigint มาปี 2020 สามารถเก็บค่าที่มีค่ามากๆ ได้ใช้ใน Bigdata
+reference types
+- Object
+- Array
+- Function
+
+4.method กับ function ความแตกต่าง
+method -> person.xxx
+5. Equal 2 อัน vs 3 อัน
+- 2 อัน check ค่า
+- 3 อัน check ค่า กับ type
+
+
+
+////////////// Variables ////////////////
+const myName = 'Pasuk';
+let height = 175;
+let isMale = false;
+let city = null;
+let bigNumber = 10n;
+
+// console.log(myName,height,isMale,city);
+
+/////////////// Data types ///////////////
+// Object
+const person = {
+  name: 'Pasuk',
+  height: 175,
+  city:'Bangkok'
+};
+
+console.log(person);
+
+person.weight = 80; //add property to person
+
+console.log(person);
+
+// Array
+const numbers = [5,10,15,20];
+
+console.log(numbers[2]);
+
+numbers.push(25); //ใส่ค่าตัวสุดท้ายของ array
+
+console.log(numbers);
+
+numbers.pop(); //ลบค่าหลังสุด
+
+numbers.unshift(); //เพิ่มค่าด้านหน้า
+
+numbers.shift(); // ลบค่าด้านหน้า
+
+/////////////// Arithmetic Operators ///////////////
+// + , - , * , / , % (Modulus) , **(Exponentiation)
+
+///////////////////// Condition ///////////////////
+const age = 25;
+
+if (age>18) {
+  console.log('Age is more than 18');
+} else {
+  console.log('Age is less than or equal to 18');
+}
+
+// Equal === 
+// Not equal !==
+// Greater than >
+// Less than <
+// Greater than or equal >=
+// Less than or equal <=
+// And &&
+// Or ||
+// Not !
+
+let password = 'abcd';
+
+if (password === '') {
+  console.log('Password is required');
+} else if (password.length >= 8 && password.length <= 12) {
+  console.log('Password is valid');
+} else {
+  console.log('Password is invalid');
+}
+
+////////////////////// Function ////////////////////////
+
+function add(a, b) {
+  return a + b;
+}
+
+function calculateVat (money, vat) {
+  return (money * vat) / 100;
+}
+
+const totalVat = calculateVat(100,7);
+console.log(totalVat);
+
+///////////////////// Flow Control /////////////////////
+/// >>>>> Loop
+
+for (let counter = 0 ; counter < 10 ; counter++){
+  if (counter === 5){
+    // continue;
+    break;
+  }
+  console.log(counter);
+}
+
+//////////////////// DOM //////////////////////////////
+///// Document Object Model
+
+                      // Document
+
+                      // html
+        // head                         body
+        // title                   p            div
+
+
+document.querySelector('input');
+document.getElementById('email');
+document.createElement('div');
+document.appendChild(element);
+
+//////////////////// Events ////////////////////////////
+คือ กดปุ่มบางปุ่มบนคีบอร์ด หรือคลิกเม้าส์
